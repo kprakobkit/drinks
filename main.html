@@ -1,0 +1,11 @@
+<div ng-repeat="ingredient in ingredients">
+  <label>
+    <input name="ingredient" type="radio" ng-click="getDrinkWith(ingredient.type)" ng-model="selectedIngredient" value"ingredient.type"/>
+    {{ingredient.type}}
+  </label>
+</div>
+<h1>Drinks</h1>
+<div class="drinks" ng-repeat="drink in drinks">
+  {{drink.name}}
+</div>
+
