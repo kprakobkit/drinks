@@ -47,4 +47,3 @@ controller.$resolve = {
   }]
 }
 app.controller('mainController', controller);
-
