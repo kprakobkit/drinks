@@ -28,9 +28,10 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 var controller = function($scope, ingredients, drinks, drinkService) {
+  $scope.selectedDrink = {};
   $scope.ingredients = ingredients;
   $scope.drinks = drinks;
-  $scope.getDrinkWith = function(ingredient) {
+  $scope.getDrinksWith = function(ingredient) {
     drinkService.getDrinks(ingredient).then(function(drinks) {
       $scope.drinks = drinks;
     });
