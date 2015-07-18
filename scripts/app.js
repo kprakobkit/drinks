@@ -21,7 +21,7 @@ app.service('drinkService', ['$http', function($http) {
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'main.html',
+    templateUrl: 'template/main.html',
     controller: controller,
     resolve: controller.$resolve
   });
