@@ -1,4 +1,4 @@
-define(['angular', 'angular-route'], function(angular) {
+define(['angular',  'controllers/controller', 'angular-route'], function(angular, controller) {
   var app = angular.module('drinkApp', ['ngRoute']);
 
   app.init = function() {
@@ -24,6 +24,8 @@ define(['angular', 'angular-route'], function(angular) {
     }
   }]);
 
+  app.controller('mainController', controller);
+
   app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
       templateUrl: 'template/main.html',
@@ -32,34 +34,6 @@ define(['angular', 'angular-route'], function(angular) {
     });
   }]);
 
-
-  var controller = function($scope, ingredients, drinks, drinkService) {
-    $scope.selectedDrink = {};
-    $scope.ingredients = ingredients
-
-    $scope.ingredients.forEach(function(ingredient) {
-      var ingredientType = ingredient.type;
-      ingredient.type = ingredientType.charAt(0).toUpperCase() + ingredientType.substring(1);
-    });
-
-    $scope.drinks = drinks;
-    $scope.getDrinksWith = function(ingredient) {
-      drinkService.getDrinks(ingredient).then(function(drinks) {
-        $scope.drinks = drinks;
-      });
-    }
-  };
-
-  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService'];
-  controller.$resolve = {
-    ingredients: ['drinkService', function(drinkService) {
-      return drinkService.getIngredients();
-    }],
-    drinks: ['drinkService', function(drinkService) {
-      return drinkService.getDrinks('whisky');
-    }]
-  }
-  app.controller('mainController', controller);
 
 
   return app;
