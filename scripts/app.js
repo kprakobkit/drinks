@@ -1,23 +1,13 @@
-define(['angular',  'controllers/controller', 'services/drink_service', 'angular-route'], function(angular, controller, drinkService) {
+define(['angular',  'controllers/controller', 'services/drink_service', 'routes', 'angular-route'], function(angular, controller, drinkService, routes) {
   var app = angular.module('drinkApp', ['ngRoute']);
+
+  app.service('drinkService', drinkService);
+  app.controller('mainController', controller);
+  app.config(routes);
 
   app.init = function() {
     angular.bootstrap(document, ['drinkApp']);
   }
-
-  app.service('drinkService', drinkService);
-
-  app.controller('mainController', controller);
-
-  app.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/', {
-      templateUrl: 'template/main.html',
-      controller: controller,
-      resolve: controller.$resolve
-    });
-  }]);
-
-
 
   return app;
 });
