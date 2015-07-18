@@ -29,7 +29,13 @@ app.config(['$routeProvider', function($routeProvider) {
 
 var controller = function($scope, ingredients, drinks, drinkService) {
   $scope.selectedDrink = {};
-  $scope.ingredients = ingredients;
+  $scope.ingredients = ingredients
+
+  $scope.ingredients.forEach(function(ingredient) {
+    var ingredientType = ingredient.type;
+    ingredient.type = ingredientType.charAt(0).toUpperCase() + ingredientType.substring(1);
+  });
+
   $scope.drinks = drinks;
   $scope.getDrinksWith = function(ingredient) {
     drinkService.getDrinks(ingredient).then(function(drinks) {
