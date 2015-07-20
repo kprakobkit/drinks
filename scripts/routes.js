@@ -1,14 +1,20 @@
-define(['controllers/controller'], function(controller) {
+define([
+  'controllers/drinks_controller',
+  'controllers/drink_controller'
+], function(
+  drinks_controller,
+  drink_controller
+) {
   var routes = function($routeProvider) {
     $routeProvider.when('/', {
       templateUrl: 'template/main.html',
-      controller: controller,
-      resolve: controller.$resolve
+      controller: drinks_controller,
+      resolve: drinks_controller.$resolve
     })
-    .when(
+    .when('/drinks', {
       templateUrl: '/templates/drink.html',
-      controller: drinkController
-    );
+      controller: drink_controller
+    });
   }
 
   routes.$inject = ['$routeProvider'];
