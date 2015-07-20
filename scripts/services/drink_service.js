@@ -1,6 +1,5 @@
 define([], function() {
   var drinkService = function($http) {
-    var state = {};
 
     function getDrinks(ingredient) {
       return $http.get('json/' + ingredient + '.json').then(function(response) {
@@ -14,19 +13,9 @@ define([], function() {
       });
     }
 
-    function setSelectedDrink(drink) {
-      state.selectedDrink = drink;
-    }
-
-    function getSelectedDrink() {
-      return state.selectedDrink;
-    }
-
     return {
       getDrinks: getDrinks,
-      getIngredients: getIngredients,
-      setSelectedDrink: setSelectedDrink,
-      getSelectedDrink: getSelectedDrink
+      getIngredients: getIngredients
     }
   }
 

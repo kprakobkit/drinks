@@ -1,5 +1,5 @@
 define([], function() {
-  var controller = function($scope, ingredients, drinks, drinkService, $location) {
+  var controller = function($scope, ingredients, drinks, drinkService, $location, localStorageService) {
     $scope.selectedDrink = {};
     $scope.ingredients = ingredients
 
@@ -17,12 +17,12 @@ define([], function() {
     };
 
     $scope.showSelectedDrink = function(drink) {
-      drinkService.setSelectedDrink(drink);
+      localStorageService.set('drink', drink);
       $location.path("/drink");
     };
   };
 
-  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', '$location'];
+  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', '$location', 'localStorageService'];
   controller.$resolve = {
     ingredients: ['drinkService', function(drinkService) {
       return drinkService.getIngredients();

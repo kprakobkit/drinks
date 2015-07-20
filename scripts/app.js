@@ -4,7 +4,8 @@ define([
   'controllers/drink_controller',
   'services/drink_service',
   'routes',
-  'angular-route'
+  'angular-route',
+  'angular-local-storage'
 ], function(
   angular,
   drinks_controller,
@@ -12,7 +13,7 @@ define([
   drinkService,
   routes
 ) {
-  var app = angular.module('drinkApp', ['ngRoute']);
+  var app = angular.module('drinkApp', ['ngRoute', 'LocalStorageModule']);
 
   app.service('drinkService', drinkService);
   app.controller('drinksController', drinks_controller);
