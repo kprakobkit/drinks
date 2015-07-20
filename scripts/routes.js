@@ -7,12 +7,12 @@ define([
 ) {
   var routes = function($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'template/main.html',
+      templateUrl: 'templates/main.html',
       controller: drinks_controller,
       resolve: drinks_controller.$resolve
     })
-    .when('/drinks', {
-      templateUrl: '/templates/drink.html',
+    .when('/drink?drinkName', {
+      templateUrl: 'templates/drink.html',
       controller: drink_controller
     });
   }
