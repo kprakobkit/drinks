@@ -4,7 +4,11 @@ define(['controllers/controller'], function(controller) {
       templateUrl: 'template/main.html',
       controller: controller,
       resolve: controller.$resolve
-    });
+    })
+    .when(
+      templateUrl: '/templates/drink.html',
+      controller: drinkController
+    );
   }
 
   routes.$inject = ['$routeProvider'];
