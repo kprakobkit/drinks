@@ -11,7 +11,7 @@ define([
       controller: drinks_controller,
       resolve: drinks_controller.$resolve
     })
-    .when('/drink?drinkName', {
+    .when('/drink', {
       templateUrl: 'templates/drink.html',
       controller: drink_controller
     });

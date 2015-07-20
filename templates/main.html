@@ -2,7 +2,7 @@
   <div class="pure-u-1-3">
     <h2>Base Spirits</h2>
     <div  ng-repeat="ingredient in ingredients">
-      <p ng-click="getDrinksWith(ingredient.type)" ng-model="selectedIngredient" value"ingredient.type">
+      <p ng-click="getDrinksWith(ingredient.type)">
         {{ingredient.type}}
       </p>
     </div>
@@ -10,18 +10,9 @@
 
   <div class="pure-u-1-3">
     <h2>Drinks</h2>
-    <div class="drinks" ng-repeat="drink in drinks">
-      <label for="drink">
-        <input type="radio" name="drink" ng-model="selectedDrink.ingredients" ng-value="drink.ingredients"/> {{drink.name}}
-      </label>
-    </div>
-  </div>
-
-
-  <div class="pure-u-1-3">
-    <h2 ng-if="selectedDrink.ingredients">Ingredients</h2>
-    <div ng-repeat="ingredient in selectedDrink.ingredients">
-      <p>{{ingredient.textPlain}}</p>
+    <div class="drinks" ng-repeat="drink in drinks" ng-click="showSelectedDrink(drink)">
+        <p> {{drink.name}}
+        </p>
     </div>
   </div>
 </div>
