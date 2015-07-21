@@ -7,6 +7,17 @@
   text-align: center;
 }
 
+.drink-name {
+  font-size: 1.5em;
+}
+
+.steps {
+  font-size: 2em;
+  margin: 0.5em;
+  padding: 0.7em 1.1em;
+  text-align: center;
+}
+
 .ingredient, .drink {
   cursor: pointer;
   display: inline-block;
@@ -14,4 +25,25 @@
   padding: 0.7em 1.1em;
   border: 3px solid #6b7381;
   color: #6b7381;
+}
+
+.drink {
+  border: 1px solid #6b7381;
+  position: relative;
+}
+
+.view-recipe {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  display: none;
+}
+
+.drink:hover .view-recipe {
+  display: block;
 }
