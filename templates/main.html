@@ -1,4 +1,4 @@
-<h2>Base Spirits</h2>
+<h2>Select your base liqour</h2>
 <div>
   <nav class="ingredients">
     <div class="ingredient" ng-repeat="ingredient in ingredients" ng-click="getDrinksWith(ingredient.type)">
@@ -7,7 +7,12 @@
   </nav>
 </div>
 
-<h2>Drinks</h2>
-<div class="drinks" ng-repeat="drink in drinks" ng-click="showSelectedDrink(drink)">
-  {{drink.name}}
+<h2>Select your drink</h2>
+<div class="drinks">
+  <div class="drink grid-item" ng-repeat="drink in drinks" ng-click="showSelectedDrink(drink)">
+    <img ng-src="http://assets.absolutdrinks.com/drinks/transparent-background-white/250x300/{{drink.id}}.png" alt="" />
+    <div>
+      {{drink.name}}
+    </div>
+  </div>
 </div>

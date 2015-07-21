@@ -3,11 +3,11 @@
   margin: 0 auto;
 }
 
-.ingredients {
+.ingredients, .drinks {
   text-align: center;
 }
 
-.ingredient {
+.ingredient, .drink {
   cursor: pointer;
   display: inline-block;
   margin: 0.5em;
@@ -15,3 +15,4 @@
   border: 3px solid #6b7381;
   color: #6b7381;
 }
+
