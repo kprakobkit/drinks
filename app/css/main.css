@@ -1,3 +1,7 @@
+body {
+  color: #6b7381;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -24,7 +28,6 @@
   margin: 0.5em;
   padding: 0.7em 1.1em;
   border: 3px solid #6b7381;
-  color: #6b7381;
 }
 
 .ingredient:hover, .drink:hover, .selected{
