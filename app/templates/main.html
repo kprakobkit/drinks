@@ -1,6 +1,6 @@
 <div class="steps">Pick your poison</div>
 <nav class="ingredients">
-  <div class="ingredient" ng-repeat="ingredient in ingredients" ng-click="getDrinksWith(ingredient.type)">
+  <div class="ingredient" ng-class="{selected: $index == selectedIndex}" ng-repeat="ingredient in ingredients" ng-click="getDrinksWith(ingredient.type, $index)">
     {{ingredient.type}}
   </div>
 </nav>

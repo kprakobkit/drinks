@@ -2,6 +2,7 @@ define([], function() {
   var controller = function($scope, ingredients, drinks, drinkService, $location, localStorageService) {
     $scope.selectedDrink = {};
     $scope.ingredients = ingredients
+    $scope.selectedIndex = ingredients.length - 1;
 
     $scope.ingredients.forEach(function(ingredient) {
       var ingredientType = ingredient.type;
@@ -10,7 +11,9 @@ define([], function() {
 
     $scope.drinks = drinks;
 
-    $scope.getDrinksWith = function(ingredient) {
+    $scope.getDrinksWith = function(ingredient, index) {
+      $scope.selectedIndex = index;
+
       drinkService.getDrinks(ingredient).then(function(drinks) {
         $scope.drinks = drinks;
       });

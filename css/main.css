@@ -27,6 +27,10 @@
   color: #6b7381;
 }
 
+.selected {
+  color: #6b7381;
+}
+
 .drink {
   border: 1px solid #6b7381;
   position: relative;

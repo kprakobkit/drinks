@@ -27,7 +27,7 @@
   color: #6b7381;
 }
 
-.ingredient:hover, .drink:hover {
+.ingredient:hover, .drink:hover, .selected{
   opacity: 0.6;
 }
 
