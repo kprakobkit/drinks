@@ -39,19 +39,6 @@ body {
   position: relative;
 }
 
-.view-recipe {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 10%;
-  left: 0;
-  padding-bottom: 2em;
-  padding-top: 2em;
-  display: none;
-  color: black;
-  font-size: 3em;
-}
-
 .drink:hover .view-recipe {
   display: block;
 }
