@@ -4,6 +4,11 @@
     <p>{{ingredient.textPlain}}</p>
   </div>
 
+  <div class="description">
+    <h2>Instructions</h2>
+    {{drink.descriptionPlain}}
+  </div>
+
   <h2>Tools</h2>
   <div ng-repeat="tool in drink.tools">
     <a ng-href="{{adService.getLinkFor(tool.id)}}" target="_blank">{{tool.text}}</a>
