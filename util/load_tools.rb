@@ -1,7 +1,10 @@
 require 'json'
 
+TARGET_FILE = "./app/json/tools.json"
 files = Dir['./app/json/*.json']
 tools = []
+
+File.delete(TARGET_FILE) if (File.exists?(TARGET_FILE))
 
 files.each do |file_name|
 
@@ -16,6 +19,6 @@ files.each do |file_name|
   tools.concat(uniq_tools);
 end
 
-File.open("./app/json/tools.json","w") do |f|
-  f.write(tools.to_json)
+File.open(TARGET_FILE,"w") do |f|
+  f.write(tools.uniq.compact.to_json)
 end
