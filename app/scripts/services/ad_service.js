@@ -11,7 +11,7 @@ define(['underscore'], function(_) {
     function getLinkFor(id) {
       return _.filter(tools, function(tool) {
         return tool.id === id;
-      });
+      })[0].affiliate_link;
     };
 
     return {

@@ -6,8 +6,7 @@
 
   <h2>Tools</h2>
   <div ng-repeat="tool in drink.tools">
-    {{tool.text}}
-    <a href="#">{{tool.affliate_link || "some link here"}}</a>
+    <a ng-href="{{adService.getLinkFor(tool.id)}}" target="_blank">{{tool.text}}</a>
   </div>
 </div>
 
