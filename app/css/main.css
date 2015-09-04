@@ -42,3 +42,12 @@ body {
 .drink:hover .view-recipe {
   display: block;
 }
+
+footer {
+  position: fix;
+  bottom: 0;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-weight: 100;
+}
