@@ -1,13 +1,13 @@
 body {
-  color: #6b7381;
+  color: #444444;
 }
 
 .container {
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
 }
 
-.ingredients, .drinks {
+.ingredients, .drinks, .title, .center-content {
   text-align: center;
 }
 
@@ -50,4 +50,9 @@ footer {
   height: 100px;
   line-height: 100px;
   font-weight: 100;
+}
+
+.drink-image img {
+  display: block;
+  margin: 0 auto;
 }

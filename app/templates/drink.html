@@ -1,24 +1,33 @@
-<h1>{{drink.name}}</h1>
-<div class="pure-u-1-3">
-  <div ng-repeat="ingredient in drink.ingredients">
-    <p>{{ingredient.textPlain}}</p>
+<div class="container">
+  <h1 class="title">{{drink.name}}</h1>
+  <div class="pure-g">
+    <div class="drink-image" ng-class="drink.story ? 'pure-u-1-2' : 'pure-u-1'">
+      <img ng-src="http://assets.absolutdrinks.com/drinks/transparent-background-white/250x300/{{drink.id}}.png" err-src="http://placehold.it/100x100" />
+    </div>
+    <div ng-if="drink.story" class="pure-u-1-2 description">
+      <h2 class="title">Story</h2>
+      {{drink.story}}
+    </div>
   </div>
 
-  <img ng-src="http://assets.absolutdrinks.com/drinks/transparent-background-white/250x300/{{drink.id}}.png" err-src="http://placehold.it/100x100" />
+  <div class="pure-g">
+    <div class="pure-u-1-3">
+      <h2 class="title">Ingredients</h2>
+      <div ng-repeat="ingredient in drink.ingredients">
+        <p class="center-content">{{ingredient.textPlain}}</p>
+      </div>
+    </div>
 
-  <div class="description">
-    <h2>Story</h2>
-    {{drink.story}}
-  </div>
+    <div class="pure-u-1-3">
+      <h2 class="title">Tools</h2>
+      <p class="center-content" ng-repeat="tool in drink.tools">
+        <a ng-href="{{adService.getLinkFor(tool.id)}}" target="_blank">{{tool.text}}</a>
+      </p>
+    </div>
 
-  <div class="description">
-    <h2>Instructions</h2>
-    {{drink.descriptionPlain}}
-  </div>
-
-  <h2>Tools</h2>
-  <div ng-repeat="tool in drink.tools">
-    <a ng-href="{{adService.getLinkFor(tool.id)}}" target="_blank">{{tool.text}}</a>
+    <div class="pure-u-1-3 description">
+      <h2 class="title">Instructions</h2>
+      {{drink.descriptionPlain}}
+    </div>
   </div>
 </div>
-
