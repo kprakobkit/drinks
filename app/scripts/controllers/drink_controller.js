@@ -1,6 +1,7 @@
 define([], function() {
   var controller = function($scope, localStorageService, adService) {;
     $scope.drink = localStorageService.get('drink');
+
     $scope.adService = adService;
   };
 

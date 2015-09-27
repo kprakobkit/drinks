@@ -1,3 +1,12 @@
+<div ng-if="!isOfAge || !checkedAge">
+  <form name="ageVerification" ng-submit="checkAge()">
+    Yo you ain't of age, are you over the legal drinking age in your country?
+    <input type="radio" ng-model="$parent.isOfAge" name="is-of-age" ng-value="true" /> Yes
+    <input type="radio" ng-model="$parent.isOfAge" name="is-of-age" ng-value="false" /> No
+    <input type="submit" value="Submit"/>
+  </form>
+</div>
+
 <div class="steps">Pick your poison</div>
 <nav class="ingredients">
   <div class="ingredient" ng-class="{selected: $index == selectedIndex}" ng-repeat="ingredient in ingredients" ng-click="getDrinksWith(ingredient.type, $index)">
