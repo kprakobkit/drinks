@@ -4,7 +4,9 @@
   "description": "buy you a drank",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node web.js",
+    "postinstall": "bash ./post_install.sh"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "matchdep": "^0.3.0"
   },
   "dependencies": {
+    "bower": "^1.5.3",
     "express": "^4.13.3",
     "gzippo": "^0.2.0",
     "morgan": "^1.6.1"
