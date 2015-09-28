@@ -97,6 +97,10 @@ footer {
   margin: 0 auto;
 }
 
+.description {
+  margin: 20px;
+}
+
 .ng-modal-overlay {
   position:fixed;
   z-index:9999;
