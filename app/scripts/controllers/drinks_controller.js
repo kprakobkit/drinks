@@ -1,10 +1,9 @@
 define([], function() {
-  var controller = function($scope, ingredients, drinks, drinkService, $location, localStorageService) {
+  var controller = function($scope, ingredients, drinks, drinkService, localStorageService, $timeout) {
     $scope.selectedDrink = {};
+    $scope.modalShown = false;
     $scope.ingredients = ingredients
     $scope.selectedIndex = ingredients.length - 1;
-    $scope.isOfAge = localStorageService.get('isOfAge');
-    $scope.checkedAge = localStorageService.get('isOfAge');
 
     $scope.ingredients.forEach(function(ingredient) {
       var ingredientType = ingredient.type;
@@ -26,16 +25,12 @@ define([], function() {
       $location.path("/drink");
     };
 
-    $scope.checkAge = function() {
-      $scope.checkedAge = true;
-      localStorageService.set('isOfAge', $scope.isOfAge);
-      if(!$scope.isOfAge) {
-        window.location.href = 'http://responsibility.org/';
-      }
-    };
+    $timeout(function() {
+      $scope.modalShown = !localStorageService.get('isOfAge');
+    }, 3000);
   };
 
-  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', '$location', 'localStorageService'];
+  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', 'localStorageService', '$timeout'];
   controller.$resolve = {
     ingredients: ['drinkService', function(drinkService) {
       return drinkService.getIngredients();

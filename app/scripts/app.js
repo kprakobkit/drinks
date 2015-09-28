@@ -6,6 +6,7 @@ define([
   'services/ad_service',
   'routes',
   'directives/err_src',
+  'directives/modal_dialog',
   'angular-route',
   'angular-local-storage'
 ], function(
@@ -15,7 +16,8 @@ define([
   drinkService,
   adService,
   routes,
-  errSrcDirective
+  errSrcDirective,
+  modalDialogDirective
 ) {
   var app = angular.module('drinkApp', ['ngRoute', 'LocalStorageModule']);
 
@@ -24,6 +26,7 @@ define([
   app.controller('drinksController', drinks_controller);
   app.controller('drinkController', drink_controller);
   app.directive('errSrc', errSrcDirective);
+  app.directive('modalDialog', modalDialogDirective);
   app.config(routes);
 
   app.init = function() {
