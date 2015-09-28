@@ -9,7 +9,8 @@ body {
 
 .main-container {
   width: 75%;
-  margin: 50px auto;
+  margin: 0px auto;
+  margin-bottom: 70px;
 }
 
 .ingredients, .drinks, .title, .center-content {
@@ -68,6 +69,11 @@ body {
 
 .primary-button:hover {
   background-color: #777777;
+}
+
+nav a, a:visited {
+  text-decoration: none;
+  color: #444444;
 }
 
 footer {

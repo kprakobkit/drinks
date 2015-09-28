@@ -25,6 +25,7 @@ define([
   app.service('adService', adService);
   app.controller('drinksController', drinks_controller);
   app.controller('drinkController', drink_controller);
+  app.controller('navController',  function(){});
   app.directive('errSrc', errSrcDirective);
   app.directive('modalDialog', modalDialogDirective);
   app.config(routes);
