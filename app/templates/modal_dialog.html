@@ -3,10 +3,21 @@
   <div class='ng-modal-dialog' ng-style='dialogStyle'>
     <div class='ng-modal-close' ng-click='hideModal()'>X</div>
     <div class='ng-modal-dialog-content'>
-      Yo you ain't of age, are you over the legal drinking age in your country?
-      <br><input type="radio" ng-model="isOfAge" name="is-of-age" ng-value="true" /> Yes
-      <input type="radio" ng-model="isOfAge" name="is-of-age" ng-value="false" /> No
-      <button type="submit" ng-click="checkAge()">Submit</button>
+      <h1 class="title">WELCOME</h1>
+      <div class="center-content">
+        <p>You have to be over the legal drinking age to enter this site.</p>
+        <p>Are you over the legal drinking age?</p>
+        <form class="form-group">
+          <div class="input-group">
+            <input type="radio" ng-model="isOfAge" name="is-of-age" ng-value="true" /> Yes
+          </div>
+          <div class="input-group">
+            <input type="radio" ng-model="isOfAge" name="is-of-age" ng-value="false" /> No
+          </div>
+          <br>
+          <div class="primary-button" ng-click="checkAge()">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

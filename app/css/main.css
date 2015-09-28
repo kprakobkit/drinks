@@ -43,6 +43,28 @@ body {
   display: block;
 }
 
+.form-group {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.input-group {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.primary-button {
+  padding: 10px 10px;
+  margin: 20px 5px;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #777777;
+}
+
 footer {
   bottom: 0;
   text-align: center;

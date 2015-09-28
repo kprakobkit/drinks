@@ -1,16 +1,15 @@
 define([], function() {
-  var controller = function($scope, ingredients, drinks, drinkService, localStorageService, $timeout) {
+  var controller = function($scope, ingredients, drinks, drinkService, $location, localStorageService, $timeout) {
     $scope.selectedDrink = {};
     $scope.modalShown = false;
     $scope.ingredients = ingredients
+    $scope.drinks = drinks;
     $scope.selectedIndex = ingredients.length - 1;
 
     $scope.ingredients.forEach(function(ingredient) {
       var ingredientType = ingredient.type;
       ingredient.type = ingredientType.charAt(0).toUpperCase() + ingredientType.substring(1);
     });
-
-    $scope.drinks = drinks;
 
     $scope.getDrinksWith = function(ingredient, index) {
       $scope.selectedIndex = index;
@@ -25,12 +24,10 @@ define([], function() {
       $location.path("/drink");
     };
 
-    $timeout(function() {
-      $scope.modalShown = !localStorageService.get('isOfAge');
-    }, 3000);
+    $scope.modalShown = !localStorageService.get('isOfAge');
   };
 
-  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', 'localStorageService', '$timeout'];
+  controller.$inject = ['$scope', 'ingredients', 'drinks', 'drinkService', '$location', 'localStorageService', '$timeout'];
   controller.$resolve = {
     ingredients: ['drinkService', function(drinkService) {
       return drinkService.getIngredients();
