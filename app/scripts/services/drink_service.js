@@ -2,7 +2,7 @@ define([], function() {
   var drinkService = function($http) {
 
     function getDrinks(ingredient) {
-      return $http.get('json/' + ingredient + '.json').then(function(response) {
+      return $http.get('json/' + ingredient.toLowerCase() + '.json').then(function(response) {
         return response.data.result;
       });
     }
