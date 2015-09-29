@@ -1,0 +1,22 @@
+{
+  "name": "drinks",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kprakobkit/drinks",
+  "authors": [
+    "kprakobkit <kprakobkit@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "underscore": "~1.8.3",
+    "angular-local-storage": "~0.2.2"
+  }
+}
