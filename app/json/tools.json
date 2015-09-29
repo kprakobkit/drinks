@@ -1,0 +1,57 @@
+[
+    {
+        "id": "citrus-press",
+        "text": "Citrus press",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00L5G2074/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00L5G2074&linkCode=as2&tag=mycustomdrink-20&linkId=IEJ525XSTEA4W7KS"
+    },
+    {
+        "id": "freezer",
+        "text": "Freezer",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00MVVITWC/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00MVVITWC&linkCode=as2&tag=mycustomdrink-20&linkId=752X4B4RC4KPFJW2"
+    },
+    {
+        "id": "jigger",
+        "text": "Jigger",
+        "affiliate_link": "http://www.amazon.com/gp/product/B0036X4YOG/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0036X4YOG&linkCode=as2&tag=mycustomdrink-20&linkId=B74HCNGQ2ZXAKHXH"
+    },
+    {
+        "id": "strainer",
+        "text": "Strainer",
+        "affiliate_link": "http://www.amazon.com/gp/product/B007TUQF9O/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007TUQF9O&linkCode=as2&tag=mycustomdrink-20&linkId=VZKOVEAVYV5M4UDX"
+    },
+    {
+        "id": "boston-shaker",
+        "text": "Boston Shaker",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00OM1MUGK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00OM1MUGK&linkCode=as2&tag=mycustomdrink-20&linkId=4H3XCZL36XCWVY7X"
+    },
+    {
+        "id": "barspoon",
+        "text": "Barspoon",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00IRY8CJ2/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00IRY8CJ2&linkCode=as2&tag=mycustomdrink-20&linkId=R6SRX5JQU2KGRXUR"
+    },
+    {
+        "id": "knife",
+        "text": "Knife",
+        "affiliate_link": "http://www.amazon.com/gp/product/B005LRYE36/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B005LRYE36&linkCode=as2&tag=mycustomdrink-20&linkId=PST4XAJU43NMIMQR"
+    },
+    {
+        "id": "muddler",
+        "text": "Muddler",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00DDTGV12/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00DDTGV12&linkCode=as2&tag=mycustomdrink-20&linkId=RIUKCVIHF7HTPLYK"
+    },
+    {
+        "id": "mixing-glass",
+        "text": "Mixing glass",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00FK7LHGY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00FK7LHGY&linkCode=as2&tag=mycustomdrink-20&linkId=R6TIEMMJ72OAMMRD"
+    },
+    {
+        "id": "twist-knife",
+        "text": "Twist Knife",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00004OCJO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00004OCJO&linkCode=as2&tag=mycustomdrink-20&linkId=CPV6WFFOHBW7MFDP"
+    },
+    {
+        "id": "blender",
+        "text": "Blender",
+        "affiliate_link": "http://www.amazon.com/gp/product/B00VK0IMYA/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00VK0IMYA&linkCode=as2&tag=mycustomdrink-20&linkId=U36GWWSIH2ZSNN3U"
+    }
+]

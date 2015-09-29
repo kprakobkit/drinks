@@ -1,0 +1,41 @@
+{
+    "result": [
+        {
+            "type": "berries"
+        },
+        {
+            "type": "brandy"
+        },
+        {
+            "type": "fruits"
+        },
+        {
+            "type": "gin"
+        },
+        {
+            "type": "ice"
+        },
+        {
+            "type": "others"
+        },
+        {
+            "type": "rum"
+        },
+        {
+            "type": "spices-herbs"
+        },
+        {
+            "type": "spirits-other"
+        },
+        {
+            "type": "tequila"
+        },
+        {
+            "type": "vodka"
+        },
+        {
+            "type": "whisky"
+        }
+    ],
+    "totalResult": 14
+}
